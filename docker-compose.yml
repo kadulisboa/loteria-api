@@ -1,0 +1,26 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - .:/var/www/html
+    environment:
+      - DATABASE_DSN=pgsql:host=db;port=5432;dbname=loteria
+      - DATABASE_USER=monetizze
+      - DATABASE_PASSWORD=strongPassword
+    command: php -S 0.0.0.0:8000 app/index.php
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: monetizze
+      POSTGRES_PASSWORD: strongPassword
+      POSTGRES_DB: loteria
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./dbdata:/var/lib/postgresql/data

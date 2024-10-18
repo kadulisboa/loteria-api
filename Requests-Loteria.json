@@ -1,0 +1,72 @@
+{
+  "info": {
+    "name": "Requests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Inicio",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "127.0.0.1:8000/"
+      }
+    },
+    {
+      "name": "Migration",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "127.0.0.1:8000/migrate"
+      }
+    },
+    {
+      "name": "Sorteio",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "127.0.0.1:8000/sorteio/criar"
+      }
+    },
+    {
+      "name": "Sorteio Resultado",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "127.0.0.1:8000/sorteio/1/resultado"
+      }
+    },
+    {
+      "name": "Gerar Bilhetes",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "127.0.0.1:8000/bilhete/criar",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"drawId\": 1,\n  \"tripulante_id\": 15,\n  \"quantity\": 50,\n  \"tens\": 10\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Sorteio Resultado Tabela",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "127.0.0.1:8000/sorteio/2/resultado"
+      }
+    }
+  ],
+  "variable": []
+}
