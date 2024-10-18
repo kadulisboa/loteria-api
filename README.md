@@ -17,8 +17,8 @@ Certifique-se de ter os seguintes softwares instalados:
 Clone o repositório para sua máquina local:
 
 ```bash
-git clone https://github.com/kadulisboa/loteria-test.git
-cd loteria-test
+git clone https://github.com/kadulisboa/loteria-api.git
+cd loteria-api
 ```
 ### Passo 2: Subir os serviços com Docker Compose
 Construa e inicie os containers usando o Docker Compose:
